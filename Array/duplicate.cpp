@@ -48,7 +48,6 @@ void dupicate22(int array[], int size){
         }
         
     }
-    int size1 = sizeof(duplicate) / sizeof(int);
 
     if (duplicateIndex > 0)
     {
