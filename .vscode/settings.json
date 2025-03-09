@@ -1,6 +1,12 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "ostream": "cpp"
-    }
+        "ostream": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "format": "cpp",
+        "initializer_list": "cpp",
+        "span": "cpp"
+    },
+    "C_Cpp.default.compilerPath": "F:/C++ compiler/ucrt64/bin/g++.exe"
 }
