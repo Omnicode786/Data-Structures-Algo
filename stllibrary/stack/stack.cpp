@@ -33,15 +33,18 @@ cout << stak.size() <<endl;
 cout << stak.top() <<endl;
 
 cout << stak.empty();
+cout<<endl;
 cout << stak.top() <<endl;
 
 // the answer wil be 0 or false 
 stack <int> stak2;
 stak2.swap(stak);
-cout << stak.top() <<endl;
+cout << stak2.top() <<endl;
 
 //  complexity wise in stack complexity is bigO (1)
 //  meaning it is in constant time
+stak2.pop(); // deletes the last one leeent
+cout << stak2.top() <<endl;
 
 
 
