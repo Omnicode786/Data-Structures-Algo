@@ -23,8 +23,12 @@ st.emplace(2);
 // it is not a linear container a tree is contained
 
 auto it = st.find(2);
+cout << *it <<endl;
+
 // it returns an iterator that gives the location of 3;
-auto it = st.find(3);
+auto it4 = st.find(3);
+cout << *it4 <<endl;
+
 //  if an element is not in the set it will always return set.end)()
 // an iterator that points to  right after the ned 
 st.erase(6);
@@ -37,4 +41,10 @@ for (auto i:st){
 
 
 
+}
+
+int main()
+{
+
+    explainSet();
 }
