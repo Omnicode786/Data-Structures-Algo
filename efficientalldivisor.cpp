@@ -9,7 +9,8 @@ int main()
     int number = 36;
 
 
-    for (int i = 1; i <= sqrt(number); i++)
+    for (int i = 1; i*i <= number; i++)
+    // i <= sqrt(number); instead of this just do square on both sides so this will become i*i <=n
     {
         if (number % i == 0)
         {
