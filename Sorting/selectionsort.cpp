@@ -1,18 +1,11 @@
-//  selection sort my method lets do dry run
-
-
 #include <iostream>
-
 using namespace std;
 
-
-
-int main()
-{
-    int array[32] = {2,3,1,5,4,321,1,21,3,32,21,33,31,23,22,12,14,532,213,32,32,3,4,2,4,5,2,421,4,44,2,213};
-    for (int i = 0; i < 32-1; i++)
+void selectionSort(int array[]){
+    
+    for (int i = 0; i < 5-1; i++)
     {
-        for (int j = 32-1; j > i ; j--)
+        for (int j = i+1; j < 5; j++)
         {
             if (array[i] > array[j])
             {
@@ -20,16 +13,51 @@ int main()
             }
             
         }
-        
+               
+    }
+    
+
+//  this works but is not ideal selection sort
+}
+
+void selectionSortEfficient(int array[])
+{
+    //  see what we have to do or a better more conventional approach is to find the minimum number first and then swapp them finally at last
+    for (int i = 0; i < 5-1; i++)
+    {
+        int minIndex = i;
+for (int j = i + 1; j < 5; j++)
+{
+    if (array[minIndex] > array[j])
+    {
+        minIndex = j;
+    }
+    
+}
+swap(array[i],array[minIndex]);
+
         
     }
+    
 
-    for (int i = 0; i < 32; i++)
+}
+int main()
+{
+
+    int array[5] = {2,4,1,5,3};
+    int array1[5] = {2,4,1,5,3};
+
+    selectionSort(array);
+selectionSortEfficient(array1);
+    for (int i = 0; i < 5; i++)
     {
         cout <<array[i]<< " ";
     }
-    
-    
+    cout << endl;
+    for (int i = 0; i < 5; i++)
+    {
+        cout <<array1[i]<< " ";
+    }
 
 
 
