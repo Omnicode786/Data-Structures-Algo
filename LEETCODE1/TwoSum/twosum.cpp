@@ -9,8 +9,8 @@ using namespace std;
         for (int i = 0; i < size; i++) {
             for (int j = i + 1; j <size; j++) {
                 if (nums[i] + nums[j] == target) {
-                    result.push_back(i);
-                    result.push_back(j);
+                    result.push_back(nums[i]);
+                    result.push_back(nums[j]);
 
                 }
             }
@@ -20,9 +20,14 @@ using namespace std;
     }
 
     int main(){
-int array[10]= {1,2,3,4,5,6,7,8,9,10};
-int target = 10;
-vector <int> result = twoSum(array,10,target);
+int array[5]= {2,4,2,5,-1};
+int target = 4;
+vector <int> result = twoSum(array,5,target);
+for (auto it:array){
+    cout<<it <<" ";
+}
+cout<< endl;
+
 
 cout << "indexes that sum up to " << target << ": ";
 for (int i = 0; i < result.size(); i += 2) {  // Increment by 2 since we're storing pairs
