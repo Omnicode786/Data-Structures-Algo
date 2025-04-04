@@ -24,6 +24,7 @@ int Betterusingmap(int array[], int size, int k) {
         }
 
         //  Sirf pehli baar aane wala sum store karna hai (pehli occurrence important hai!)
+        //  basically sum exist ni krta to store krlo smjhe
         if (prefixMap.find(sum) == prefixMap.end()) { 
             prefixMap[sum] = i; // Pehli baar mila toh store kar lo
         }

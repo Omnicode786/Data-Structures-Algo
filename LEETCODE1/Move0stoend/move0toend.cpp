@@ -41,7 +41,7 @@ void opitimalmover(vector <int> &nums){
     {
         if (nums[i] == 0){
             j = i;
-            break;;
+            break;
         }
     }
     if (j == -1) return;
