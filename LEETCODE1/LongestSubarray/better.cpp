@@ -25,6 +25,7 @@ int Betterusingmap(int array[], int size, int k) {
 
         //  Sirf pehli baar aane wala sum store karna hai (pehli occurrence important hai!)
         //  basically sum exist ni krta to store krlo smjhe
+        // also check for the farthest sum mtlb agr aik bar left se arhe hen or sum store krdia ab phir se agr wohi sum ajaye to use store na kren kuke we want the longest subarray
         if (prefixMap.find(sum) == prefixMap.end()) { 
             prefixMap[sum] = i; // Pehli baar mila toh store kar lo
         }
@@ -38,6 +39,8 @@ int main() {
     int n = Betterusingmap(a, 8, 4); // K = 2 ka longest subarray dhundo
     cout << n; // Expected output: 2 (kyunki [1,1] longest valid subarray hai)
 }
+
+//  thid id hr btter one for positive ones and a optimal for positve negative and 0s
 
 
 // Step 1: Track sum as we traverse
