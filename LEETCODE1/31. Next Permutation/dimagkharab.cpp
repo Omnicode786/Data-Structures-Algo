@@ -15,11 +15,17 @@ for (int i = n-2; i >= 0; i--)
 
 //  my logic is actually wrong [1,3,2]
 
-// [3,2,1]
-// [2,1,3]
-//  now look at this we need to find the element that is greater than the lastindex number but still has to be smaller than everyone else
-//  this is why the other loop was used
-        
+// Initially, I considered using `nextindex` directly inside this loop to avoid
+            // needing an extra loop to find the smallest larger element. However, that approach
+            // doesn't work in some cases. Consider this example:
+            // 
+            // [1, 3, 2] -> We find that 1 < 3, so lastIndex would be set to 0.
+            // But now, the element to swap with 1 isn't simply the immediate next element (which is 3).
+            // We need to find the next element that is **greater than 1 but still the smallest possible**
+            // to ensure the next permutation is the "next" one.
+            //
+            // This is why the extra loop is required: we need to find the smallest number that is greater
+            // than `array[lastIndex]`, which could be further along the array, not just the next index.
         break;
     }
     
