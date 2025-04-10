@@ -1,30 +1,48 @@
 #include <iostream>
 
+
 using namespace std;
 
-
 int Longest(int arr[], int n){
-int maxconsec = 1;
-int consecutive = 1;
-for (int i = 1; i < n; i++)
-{
-    if (arr[i] == arr[i - 1] + 1) {
-        consecutive++;
+
+    int longest = 1;
+    int count  = 0;
+    for (int i = 0; i < n; i++)
+    {
+        int x = arr[i];
+        count = 1;
+
+        bool found = true;
+        while (found)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                found = false;
+                if (arr[j] == x+1)
+                {
+                    count++;
+                    x = x+1;
+                    found = true;
+                    break;
+                }
+                
+            }
+        }
+        
+
+    longest = max(longest,count);
+        
     }
-    else if (arr[i] != arr[i - 1]) {
-        consecutive = 1;  // reset if not duplicate, but not consecutive
-    }
-    maxconsec = max(maxconsec,consecutive);
-    
+    return longest;
+
+
 }
 
-return maxconsec;
-
-}
 int main(){
-    
-int arr[19] = {1,2,4,5,6,7,8,9,10,11,12,13,14,10,11,12,13,14,15};
-int n = Longest(arr,19);
-cout << n;
+
+    int arr[10] = {22,33,3,10,2,1,5,4,9,11};
+int n = Longest(arr,10);
+cout <<n;
+
 
 }
