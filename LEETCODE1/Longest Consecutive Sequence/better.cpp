@@ -1,8 +1,13 @@
 #include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
+
+#include <algorithm>
+//  it has to be sorted
 
 int longest(int arr[],int n){
 
+    sort(arr, arr + n); // Sort the array first
     int count = 0;
     int longer = 1;
     int lastSmaller = INT_MIN;
@@ -13,8 +18,9 @@ int longest(int arr[],int n){
             count++;
             lastSmaller = arr[i];
         }
-        else{
-            count = 1;
+        else if (lastSmaller != arr[i])
+            {
+                count = 1;
             lastSmaller = arr[i];
         }
         
@@ -28,8 +34,8 @@ int longest(int arr[],int n){
 }
 
 int main(){
-    int arr[19] = {1,2,4,5,6,7,8,9,10,11,12,13,14,10,11,12,13,14,15};
-int n = longest(arr,19);
+    int arr[10] = {22,33,3,10,2,1,5,4,9,11};
+int n = longest(arr,10);
 cout << n;
 
 }
