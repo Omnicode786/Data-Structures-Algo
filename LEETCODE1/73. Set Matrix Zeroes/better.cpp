@@ -46,7 +46,7 @@ int main(){
     // Initialize the array
     int temp[3][3] = {{1,0,2},{3,5,0},{2,4,5}};
     for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
+        for (int j = 0; j < m; j++) {
             arr[i][j] = temp[i][j];
         }
     }
