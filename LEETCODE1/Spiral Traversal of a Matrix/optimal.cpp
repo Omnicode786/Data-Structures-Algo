@@ -47,4 +47,6 @@ vector<int> spiralOrder(vector<vector<int>> &mat)
 }
 
 //  tc is O(nxm)
+int main(){
+    
 }
