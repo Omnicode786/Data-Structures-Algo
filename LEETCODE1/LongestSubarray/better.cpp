@@ -36,7 +36,7 @@ int Betterusingmap(int array[], int size, int k) {
 
 int main() {
     int a[8] = {1, 1, 2, 3,-1,-1,3, 2}; // Test case
-    int n = Betterusingmap(a, 8, 4); // K = 2 ka longest subarray dhundo
+    int n = Betterusingmap(a, 8, 99); // K = 2 ka longest subarray dhundo
     cout << n; // Expected output: 2 (kyunki [1,1] longest valid subarray hai)
 }
 
