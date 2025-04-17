@@ -25,7 +25,7 @@ return maxsum;
 int main(){
 
 
-    int arr[10] = {1,2,3,4,7,4,2,6,3,2};
+    int arr[10] = {1,2,3,4,7,-4,2,6,3,2};
     int n = MaxSubarraySum(arr,10);
     cout <<n; 
 }
