@@ -42,7 +42,7 @@ vector<int> MajorityElem2(int arr[],int n){
 
 }
 int main(){
-int arr[9] = {1,1,1,2,2,2,3,3,3};
+int arr[9] = {1, 2, 2, 2, 3, 3, 3, 3, 3};
 //  this is equal not majority
 
 vector<int> answer = MajorityElem2(arr,9);

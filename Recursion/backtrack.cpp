@@ -29,7 +29,7 @@ void print(int end1 ,int end)
 int main()
 {
 
-print(4,4);
+print(6,6);
 
 
 }
