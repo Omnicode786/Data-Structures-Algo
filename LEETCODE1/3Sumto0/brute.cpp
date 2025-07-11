@@ -1,34 +1,35 @@
 #include <bits/stdc++.h>
 
+
 using namespace std;
 
 
+vector<vector<int>> threesum(vector <int> num,int n){
 
-vector <vector<int>> threesum(vector<int> list, int n){
 
     set<vector<int>> st;
-   
     for (int i = 0; i < n; i++)
     {
-         set <int> hash;
         for (int j = i+1; j < n; j++)
         {
-            int third = -(list[i] + list[j]);
-             if (hash.find(third) !=hash.end())
+            for (int k = j+1; k < n; k++)
+            {
+                if (num[i] + num[j] + num[k] == 0)
                 {
-                    vector <int> temp = {list[i],list[j], third};
+                    vector <int> temp = {num[i],num[j],num[k]};
                     sort(temp.begin(),temp.end());
                     st.insert(temp);
                 }
+
                 
-                    hash.insert(list[j]);
-                
-                
+            }
+            
         }
         
     }
-     vector<vector<int>> ans(st.begin(),st.end());
+    vector<vector<int>> ans(st.begin(),st.end());
     return ans;
+
 
 
 
@@ -38,9 +39,9 @@ vector <vector<int>> threesum(vector<int> list, int n){
 int main(){
 
 
-vector <int> list ={-1, 0, 1, 2, -1, -4};
+vector <int> list = {1,-1,2,-1,2,3,-4,5,-5,4};
 
-vector<vector<int>> ans = threesum(list,6);
+vector<vector<int>> ans = threesum(list,10);
    for (auto& triplet : ans) {
         cout << "[ ";
         for (int num : triplet) {
