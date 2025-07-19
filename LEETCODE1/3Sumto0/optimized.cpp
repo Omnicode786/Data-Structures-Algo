@@ -27,7 +27,7 @@ for (int i = 0; i < n - 2; i++)
     else{
         ans.push_back({num[i], num[start], num[end]});
         while (start < end && num[start] == num[start+1]) start++;
-        while (end > start && num[end] == num[end-1]) end++;
+        while (end > start && num[end] == num[end-1]) end--;
         
         start++;
         end--;
